@@ -11,11 +11,12 @@ public class Exception_test {
             System.out.print("range upperbound: ");
             int upperbound = scanner.nextInt();
             if (upperbound < lowerbound)
-                Exceptions.boundControl(lowerbound, upperbound);
+                Exceptions.boundControl(lowerbound, upperbound); //Throws Exception
             System.out.println("Now pick a number within the range");
             int number = scanner.nextInt();
             if (number <= lowerbound || number >= upperbound)
-                Exceptions.outOfRange(lowerbound, upperbound, number);
+                Exceptions.outOfRange(lowerbound, upperbound, number); // Throws Exception
+            System.out.println("Your number was within your defined bounds. Congratz!");
         } catch (InputMismatchException e) {
             System.out.println("please select an integer");
         } catch (Exception e1) {

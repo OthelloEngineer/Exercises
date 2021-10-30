@@ -1,4 +1,4 @@
-public class Exceptions{
+public class Exceptions{ // used to call Exceptions
     public static void boundControl (int lowerbound, int upperbound) throws BoundControl{
         throw new BoundControl(lowerbound, upperbound);
     }
@@ -16,9 +16,9 @@ class BoundControl extends Exception {
 }
 
 class OutOfRange{
-
+                            // this is getting out of hand! Now there are two of them!
     OutOfRange(int lowerbound, int upperbound, int number) throws LowerBoundError, UpperBoundError {
-        if (number <= upperbound)
+        if (number <= upperbound) //spicy if statement without else cause exception stops the try block.
             throw new LowerBoundError(lowerbound, number);
         throw new UpperBoundError(upperbound, number);
     }
